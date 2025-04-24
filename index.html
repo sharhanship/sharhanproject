@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="YOUR_CSRF_TOKEN_HERE">
+    <link rel="stylesheet" href="./view/index">
+    <link rel="icon" href="./content/log/myloginhead" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>علی شرحان</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <a href="#" class="logo">Ali Sharhan</a>
+
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        <nav class="navbar">
+            <a href="#home" class="active">صفحه اصلی</a>
+            <a href="#about">درباره من</a>  
+            <a href="#skills">مهارت ها</a>
+            <a href="#education">سفر من</a>
+            <a href="#contact">پیام به من</a>
+        </nav>
+
+    </header>
+
+    <section class="home" id="home">
+
+        <div class="home-content">
+
+            <h1>من <span>علی شرحان هستم</span>!</h1>
+            <div class="text-animate">
+                <h1 class="text-animateorg">من یک :</h1>
+                <h3 id="typing-text"></h3>
+                <span class="cursor">|</span>
+            </div>
+            <p>روی این فلش کلیک کن تا بیشتر بشناسیم</p>
+            <div class="btn-box">
+                <div class="footer-icontop">
+                    <a href="#about"><i class='bx bxs-downvote'></i></a>
+                </div>
+                <a href="#" class="btn" id="downloadBtn">دانلود رزومه</a>
+                <a href="#contact" class="btn">پیام به من</a>
+            </div>
+
+        </div>
+
+        <div class="home-sci">
+           
+            <a href="https://www.instagram.com/torch2049?igsh=dzBzb2tsNDNyMnU1" target="_blank"><i class='bx bxl-instagram-alt'></i></a>
+            <a href="https://t.me/passfic2049" target="_blank"><i class='bx bxl-telegram'></i></a>
+            <a href="https://www.linkedin.com/in/ali-sharhan-207b8535b/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+        </div>
+
+        <div class="profile-container">
+            <div class="profile-image"></div>
+        </div>
+
+    </section>
+
+    <section class="about" id="about">
+        <h2 class="heading">
+            درباره <span>من</span>
+        </h2>
+    
+        <div class="abot-img">
+            <img src="./content/mypic/mypicinhome" alt="عکس من">
+            <span class="circle-apin"></span>
+        </div>
+    
+        <div class="about-content">
+         
+            <h3 id="display-about-title">نیم نگاه</h3>
+            <p id="display-about-description">
+                متن پیش‌فرض...
+            </p>
+            <div class="btn-box btns">
+                <a href="#skills" class="btn">مهارت های من </a>
+                <div class="footer-icontop">
+                    <a href="#home"><i class='bx bxs-upvote'></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="./apps/aboutSectionviewuserspart"></script>
+
+    <section class="skills" id="skills">
+        <h2 class="heading">مهارت های <span> من</span></h2>
+
+        <div class="skills-row">
+
+            <div class="skills-column">
+                <h3 class="title">مهارت های کد نویسی</h3>
+
+                <div class="skills-box">
+
+                    <div class="skills-content">
+                        
+                        <div class="peogress">
+                            <h3> #C <span class="spanorg">20%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="footer-icontop">
+                <a href="#about"><i class='bx bxs-upvote'></i></a>
+                <a href="#education"><i class='bx bxs-downvote'></i></a>
+            </div>
+        </div>
+
+    </section>
+
+    <script src="./apps/codeskillsManagerforuserpaert"></script>
+
+    <section class="education" id="education">
+        <h2 class="heading">سفر <span>من</span></h2>
+
+        <div class="education-row">
+            <div class="education-column">
+                <h3 class="titel">تجربیات</h3>
+
+                <div class="education-box">
+
+                    <div class="education-content">
+                        <div class="content">
+                            <div class="year"><i class='bx bx-calendar'></i>1401</div>
+                            <h3>ورود تخصصی به دنیای تلفن های هوشمند:</h3>
+                            <p>اشنایی با ساختار انها و نوع عملکرد سیستم عامل های انها . اشنایی با قطعات سخت افزاری انها.
+                            </p>
+                        </div>
+                    </div>
+
+               
+
+                </div>
+            </div>
+
+            <div class="footer-icontop">
+                <a href="#contact"><i class='bx bxs-downvote'></i></a>
+                <a href="#skills"><i class='bx bxs-upvote'></i></a>
+            </div>
+        </div>
+
+    </section>
+
+    <script src="./apps/educationManagerforuserpaert"></script>
+
+
+
+    <section class="contact" id="contact">
+        <h2 class="heading">تماس با <span>من!</span></h2>
+
+        <form id="contactForm" novalidate> 
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="text" name="name" placeholder="نام و نام خانوادگی (فقط فارسی)">
+                    <span class="focus"></span>
+                </div>
+                <div class="input-field">
+                    <input type="email" name="email" placeholder="آدرس ایمیل">
+                    <span class="focus"></span>
+                </div>
+            </div>
+
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="tel" name="phone" placeholder="شماره تلفن (09xxxxxxxxx)">
+                    <span class="focus"></span>
+                </div>
+            </div>
+
+            <div class="textarea-field">
+                <textarea name="message" cols="30" rows="10" placeholder="پیام شما برای من"></textarea>
+                <span class="focus"></span>
+            </div>
+
+            <div class="btn-box btns">
+                <button type="submit" class="btn">ارسال پیام</button>
+                <a href="#education" class="btn">بازگشت</a>
+            </div>
+        </form>
+    </section>
+
+    <script src="./apps/jsforindexbackendpart"></script>
+
+    <footer class="footer">
+        <div class="footer-text">
+            <p>© 1404 تمامی حقوق مادی و معنوی این سایت متعلق به علی شرحان می‌باشد.</p>
+        </div>
+
+        <div class="footer-icontop">
+            <a href="#"><i class='bx bxs-upvote'></i></a>
+        </div>
+    </footer>
+
+    <script src="./apps/jsforindexfrontpart"></script>
+</body>
+
+</html>

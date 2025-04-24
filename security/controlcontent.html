@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../view/adminpart">
+    <link rel="icon" href="../content/log/adminpagelogo" type="image/x-icon">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Vazirmatn:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>پنل مدیریت</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">Admin Panel</div>
+
+        <button class="mobile-menu-btn">
+            <i class='bx bx-menu menu-icon'></i>
+            <i class='bx bx-x close-icon'></i>
+        </button>
+
+        <nav class="navbar">
+            <ul class="nav-list">
+                <li><a href="#messages-section">پیام‌های من</a></li>
+                <li><a href="#about-section">درباره من</a></li>
+                <li><a href="#add-skills-section">افزودن مهارت کد نویسی</a></li>
+                <li><a href="#skills-list-section">لیست مهارت های کد نویسی</a></li>
+                <li><a href="#add-education_section">افزودن تجربه</a></li>
+                <li><a href="#list-education_section">لیست تجربه ها</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main class="container">
+
+        <section id="messages-section" class="section active-section">
+            <h2>پیام‌های دریافتی</h2>
+            <div class="table-container">
+                <table class="messages-table">
+                    <thead>
+                        <tr>
+                            <th>ردیف</th>
+                            <th>نام و نام خانوادگی</th>
+                            <th>ایمیل</th>
+                            <th>شماره تلفن</th>
+                            <th>متن پیام</th>
+                            <th>عملیات</th>
+                        </tr>
+                    </thead>
+                    <tbody id="messages-tbody">
+
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <script src="../apps/messagesinadminpart"></script>
+
+        <section id="about-section" class="section">
+            <h2>درباره من</h2>
+            <form class="about-form">
+                <div class="form-group">
+                    <label for="title">عنوان</label>
+                    <input type="text" id="title" placeholder="مثال: توسعه‌دهنده فرانت‌اند">
+                </div>
+                <div class="form-group">
+                    <label for="description">توضیحات</label>
+                    <textarea id="description" rows="5" placeholder="توضیحات درباره خودتان..."></textarea>
+                </div>
+                <button type="submit" class="save-btn">ذخیره</button>
+            </form>
+        </section>
+
+        <script src="../apps/aboutSectionforadminpart"></script>
+
+        <section id="add-skills-section" class="section">
+            <h2>افزودن مهارت جدید</h2>
+            <form id="add-skill-form" class="skill-form">
+                <div class="form-group">
+                    <label for="skill-name">نام مهارت</label>
+                    <input type="text" id="skill-name" placeholder="مثال: JavaScript" required>
+                </div>
+                <div class="form-group">
+                    <label for="skill-percent">درصد مهارت: <span id="percent-value">50%</span></label>
+                    <input type="range" id="skill-percent" min="0" max="100" value="50" required>
+                </div>
+                <button type="submit" class="save-btn">اضافه کردن</button>
+            </form>
+        </section>
+
+        <section id="skills-list-section" class="section">
+            <h2>لیست مهارت‌های موجود</h2>
+            <div class="table-container">
+                <table class="skills-table">
+                    <thead>
+                        <tr>
+                            <th>ردیف</th>
+                            <th>نام مهارت</th>
+                            <th>درصد تسلط</th>
+                            <th>عملیات</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>HTML/CSS</td>
+                            <td>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 90%;"></div>
+                                </div>
+                                <span class="percent">90%</span>
+                            </td>
+                            <td><button class="delete-btn">حذف</button></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>JavaScript</td>
+                            <td>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 75%;"></div>
+                                </div>
+                                <span class="percent">75%</span>
+                            </td>
+                            <td><button class="delete-btn">حذف</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <script src="../apps/codeskillsManager"></script>
+
+        <section id="add-education_section" class="section">
+            <h2>افزودن تجربه جدید</h2>
+            <form class="education-form">
+                <div class="form-group">
+                    <label for="education-year">سال</label>
+                    <input type="text" id="education-year" placeholder="مثال: ۱۴۰۰-۱۳۹۸ یا 2023-2021" required>
+                </div>
+                <div class="form-group">
+                    <label for="education-title">عنوان تجربه</label>
+                    <input type="text" id="education-title"
+                        placeholder="مثال: کارشناسی کامپیوتر یا توسعه دهنده فرانت‌اند در شرکت X" required>
+                </div>
+                <div class="form-group">
+                    <label for="education-description">توضیحات</label>
+                    <textarea id="education-description" rows="4"
+                        placeholder="توضیحات بیشتر درباره این تجربه..."></textarea>
+                </div>
+                <button type="submit" class="save-btn">افزودن تجربه</button>
+            </form>
+        </section>
+
+        <section id="list-education_section" class="section">
+            <h2>لیست تجربه‌ها</h2>
+            <div class="table-container">
+                <table class="education-table">
+                    <thead>
+                        <tr>
+                            <th>ردیف</th>
+                            <th>سال</th>
+                            <th>عنوان</th>
+                            <th>توضیحات</th>
+                            <th>عملیات</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>۱۴۰۲-۱۴۰۰</td>
+                            <td>توسعه دهنده فرانت‌اند</td>
+                            <td class="education-preview">توسعه رابط کاربری با React.js در شرکت فناوری</td>
+                            <td><button class="delete-btn">حذف</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <script src="../apps/educationManagerforadmin"></script>
+
+    </main>
+
+    <footer class="admin-footer">
+        <div class="footer-content">
+            <div class="footer-copyright">
+                © 1404 تمامی حقوق مادی و معنوی این سایت متعلق به علی شرحان می‌باشد.
+            </div>
+        </div>
+    </footer>
+
+    <script src="../apps/jsforadminpartbackend"></script>
+    <script src="../apps/jsforadminpartfront"></script>
+</body>
+
+</html>
