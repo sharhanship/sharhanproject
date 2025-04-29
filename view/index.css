@@ -1,5 +1,5 @@
 :root {
-  --primary-color: rgb(0, 119, 255);
+  --primary-color: rgb(0, 132, 255);
   --secondary-color: #1f242d;
   --dark-color: #081b29;
   --light-color: #f3f3f3;
@@ -352,7 +352,7 @@ p {
   width: 50rem;
   height: 50rem;
   border-radius: 50%;
-  background: url('../content/mypic/mypicinhome') no-repeat center center/cover;
+  background: url('../content/mypic/photo_۲۰۲۵-۰۴-۲۶_۰۴-۵۴-۴۲.jpg') no-repeat center center/cover;
   border: 0.2rem solid var(--primary-color);
 }
 
@@ -571,7 +571,7 @@ p {
 }
 
 .peogress h3 span {
-  color: var(--white);
+ color: rgb(255, 255, 255);
 }
 
 .bar {
@@ -586,7 +586,7 @@ p {
   display: block;
   height: 100%;
   border-radius: 0.3rem;
-  background: var(--primary-color);
+ background-color: aqua;
   position: relative;
   overflow: hidden;
   transition: width 1.5s ease;
