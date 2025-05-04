@@ -1,0 +1,1 @@
+********************This section contains the html file for the admin panel section.********************

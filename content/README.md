@@ -1,0 +1,1 @@
+********************This section contains content such as GIFs, photos, and logos.********************

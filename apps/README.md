@@ -1,0 +1,1 @@
+********************This section contains all the JavaScript files for communication between the front-end and back-end and displaying changes, data, and notifications to the user.********************
