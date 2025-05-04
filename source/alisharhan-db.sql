@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.2
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Apr 15, 2025 at 07:23 AM
--- Server version: 5.7.24
--- PHP Version: 7.3.1
+-- Generation Time: May 04, 2025 at 03:10 PM
+-- Server version: 9.1.0
+-- PHP Version: 8.3.14
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -29,18 +29,18 @@ SET time_zone = "+00:00";
 
 DROP TABLE IF EXISTS `about_section`;
 CREATE TABLE IF NOT EXISTS `about_section` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `title` varchar(100) COLLATE utf8mb4_persian_ci NOT NULL COMMENT 'متن تگ h3 (نیم نگاه)',
-  `description` text COLLATE utf8mb4_persian_ci NOT NULL COMMENT 'متن تگ p (توضیحات درباره من)',
+  `id` int NOT NULL AUTO_INCREMENT,
+  `title` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_persian_ci NOT NULL COMMENT 'متن تگ h3 (نیم نگاه)',
+  `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_persian_ci NOT NULL COMMENT 'متن تگ p (توضیحات درباره من)',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_persian_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_persian_ci;
 
 --
 -- Dumping data for table `about_section`
 --
 
 INSERT INTO `about_section` (`id`, `title`, `description`) VALUES
-(9, 'نیم نگاه', 'من علی شرحان هستم. متولد سال: 1386 ساکن شهرستان دزفول . برنامه نویس وب و توسعه دهنده اپلیکیشن برای سیستم عامل ها . \nعلاقم به دنیای کامپیوتر از جایی شروع شد که این سوال برام پیش اومد که همه چیز چطوری کار میکنه . ');
+(13, 'علی شرحان هستم', 'همه جیز از جایی شروع شد که با خدم گفتم همه چیز چطوری کار میکنه.........');
 
 -- --------------------------------------------------------
 
@@ -50,12 +50,12 @@ INSERT INTO `about_section` (`id`, `title`, `description`) VALUES
 
 DROP TABLE IF EXISTS `adminpartloginpart`;
 CREATE TABLE IF NOT EXISTS `adminpartloginpart` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int NOT NULL AUTO_INCREMENT,
   `username` varchar(50) NOT NULL,
   `password` varchar(255) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `username_UNIQUE` (`username`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `adminpartloginpart`
@@ -72,12 +72,12 @@ INSERT INTO `adminpartloginpart` (`id`, `username`, `password`) VALUES
 
 DROP TABLE IF EXISTS `coding_skills`;
 CREATE TABLE IF NOT EXISTS `coding_skills` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `skill_name` varchar(50) COLLATE utf8mb4_persian_ci NOT NULL,
-  `skill_percentage` int(11) NOT NULL,
+  `id` int NOT NULL AUTO_INCREMENT,
+  `skill_name` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_persian_ci NOT NULL,
+  `skill_percentage` int NOT NULL,
   `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_persian_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_persian_ci;
 
 --
 -- Dumping data for table `coding_skills`
@@ -92,9 +92,10 @@ INSERT INTO `coding_skills` (`id`, `skill_name`, `skill_percentage`, `created_at
 (14, 'phpmyadmin', 95, '2025-04-14 14:52:45'),
 (15, 'sql server', 80, '2025-04-14 14:53:06'),
 (16, 'wpf', 60, '2025-04-14 14:53:16'),
-(17, 'Windows Form APP', 95, '2025-04-14 14:53:34'),
 (18, 'xml', 50, '2025-04-14 14:53:43'),
-(19, 'ASP.NET', 30, '2025-04-15 07:17:14');
+(19, 'ASP.NET', 30, '2025-04-15 07:17:14'),
+(20, 'DART', 8, '2025-04-29 18:29:19'),
+(21, 'DART', 6, '2025-05-03 07:01:07');
 
 -- --------------------------------------------------------
 
@@ -104,25 +105,25 @@ INSERT INTO `coding_skills` (`id`, `skill_name`, `skill_percentage`, `created_at
 
 DROP TABLE IF EXISTS `contacts`;
 CREATE TABLE IF NOT EXISTS `contacts` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nameandfamily` varchar(100) COLLATE utf8mb4_persian_ci NOT NULL,
-  `email` varchar(100) COLLATE utf8mb4_persian_ci NOT NULL,
-  `numberphone` varchar(20) COLLATE utf8mb4_persian_ci NOT NULL,
-  `mortext` text COLLATE utf8mb4_persian_ci,
+  `id` int NOT NULL AUTO_INCREMENT,
+  `nameandfamily` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_persian_ci NOT NULL,
+  `email` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_persian_ci NOT NULL,
+  `numberphone` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_persian_ci NOT NULL,
+  `mortext` text CHARACTER SET utf8mb4 COLLATE utf8mb4_persian_ci,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_persian_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=33 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_persian_ci;
 
 --
 -- Dumping data for table `contacts`
 --
 
 INSERT INTO `contacts` (`id`, `nameandfamily`, `email`, `numberphone`, `mortext`) VALUES
-(15, 'محمد سعادتی فرد', 'mamad2000@gmail.com', '09922020202', 'سلام داداش زندگی چگونه میگذرد.'),
-(16, 'علی شرحان', 'abmtim1@gmail.com', '09920352936', 'درود خدایان بر خودم.'),
-(17, 'رضا جودکی', 'razar@gmail.com', '09165545454', 'من میخاستم در باره یه چیزی حرف بزنیم دادا.......'),
-(18, 'گوشه گیر', 'coget@gmail.com', '09920354545', 'استاد یادتون نره چهارشنبه.'),
-(19, 'زندی', 'zandi2000@gmail.com', '09165465464', 'من پرس کارم خودم.....'),
-(20, 'شوشتری', 'shsh4256@gmail.com', '09920356565', 'واااااای چیکار کردی با دلم واااااااای....');
+(27, 'رضا عزیزی', 'rezaazizi2000@gmail.com', '09165485963', 'سلام . میخام بدونم چطوری باید درخواست بدم برای استفاده از سرویس های گوگل......'),
+(28, 'رضا جودکی', 'jodi5055@gmail.com', '09927856216', 'سلام میخاستم یه درخواست بدم برای ساخت یک سایت فروشگاهی.'),
+(29, 'محمد سعادتی فرد', 'mamad2000@gmail.com', '09925654646', 'من میخام بدونم چطوری میشه بازی ساخت در بستر وب'),
+(30, 'قاسمی', 'abmtim1@gmail.com', '09920352936', 'سلام علی'),
+(31, 'قاسمی', 'abmtim1@gmail.com', '09920352936', 'علی خوبی؟'),
+(32, 'علی قاسمی', 'abmtim1@gmail.com', '09920352936', 'میخام باهم بازی کنیم');
 
 -- --------------------------------------------------------
 
@@ -132,10 +133,10 @@ INSERT INTO `contacts` (`id`, `nameandfamily`, `email`, `numberphone`, `mortext`
 
 DROP TABLE IF EXISTS `education_section`;
 CREATE TABLE IF NOT EXISTS `education_section` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `year` varchar(10) COLLATE utf8mb4_persian_ci NOT NULL COMMENT 'سال (مثال: 1401)',
-  `title` varchar(200) COLLATE utf8mb4_persian_ci NOT NULL COMMENT 'متن تگ h3 (عنوان)',
-  `description` text COLLATE utf8mb4_persian_ci NOT NULL COMMENT 'متن تگ p (توضیحات)',
+  `id` int NOT NULL AUTO_INCREMENT,
+  `year` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_persian_ci NOT NULL COMMENT 'سال (مثال: 1401)',
+  `title` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_persian_ci NOT NULL COMMENT 'متن تگ h3 (عنوان)',
+  `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_persian_ci NOT NULL COMMENT 'متن تگ p (توضیحات)',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_persian_ci;
 
