@@ -348,7 +348,7 @@
     position: relative;
     width: 60rem;
     height: 60rem;
-    border-radius: 50%;
+    border-radius: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -359,7 +359,7 @@
     position: relative;
     width: 50rem;
     height: 50rem;
-    border-radius: 50%;
+    border-radius: 40%;
     background: url('../content/mypic/photo_۲۰۲۵-۰۴-۲۶_۰۴-۵۴-۴۲.jpg') no-repeat center center/cover;
     border: 0.2rem solid var(--primary-color);
   }

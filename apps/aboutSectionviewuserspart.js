@@ -1,6 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // ... (کدهای قبلی)
-
     // تابع بارگیری و نمایش داده‌ها
     function loadAndDisplayAboutData() {
         fetch('./apis/getAboutfrontAPI')
