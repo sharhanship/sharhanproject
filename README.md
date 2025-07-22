@@ -1,2 +1,1 @@
-for run you need wampserver and upload database in phpmyadmin and dowanload all folders and copy in C\wamp64\www\this project.
-so.....
+![logo](https://github.com/sharhanship/sharhanproject/blob/main/content/mypic/picsharhanresume.png)
