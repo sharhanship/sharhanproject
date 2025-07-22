@@ -1,5 +1,5 @@
-![logo](https://github.com/sharhanship/sharhanproject/blob/main/content/mypic/picsharhanresume.png)
-# 📄 SharhanProject  
+# 📄 SharhanProject
+![logo](https://github.com/sharhanship/sharhanproject/blob/main/introsharhanresume.gif)
 **Universal Resume Portfolio Platform**  
 *A dynamic, secure, and admin-controlled platform to showcase resumes for professionals in any field.*  
 ---
